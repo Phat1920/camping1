@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* gọi tất cả  mọi thẻ và mình muốn bỏ chiều cao tự mặc định thì phải thêm cú pháp */
+
+body {
+    background-color: #faf4f2;
+}
+
+.header {
+    background-color: #f8e1db;
+    padding: 10px 40px;
+    /* Hex  mã màu từ 0->f rrggbb 
+không nói gì là tự hiểu khoảng cách 4 phía
+padding :20px tự hiểu 4 phía 
+padding :20px 40px hiểu là trên dưới 20px trái phải 40px
+padding:10px 20px 30px 40px trên phải dưới trái
+padding-left: 20px;
+
+padding-top:20px ;
+padding-bottom: 20px;
+padding-right: 20px;
+*/
+}
+
+.header img {
+    width: 80px;
+}
+
+
+/* gọi tên thằng foder lớn = class .header  là gọi class  . navbar gọi tiếp thẻ  a bên trong navbar*/
+
+.header .navbar {
+    margin-top: 10px;
+}
+
+.header .navbar a {
+    color: #000000;
+    text-decoration: none;
+    /* là bỏ đường gạch dưới */
+    margin-right: 20px;
+    /* là cách thật còn padding nhìn như cách nhưng không phải */
+    /* là khoản cách giữa các thẻ */
+    font-size: 17px;
+    /* font-weight: độ đậm nhạt từ 100-900 */
+}
+
+.header .navbar a:hover {
+    color: #ff0000;
+}
+
+
+/* :hoder để tạo cảm  giác  */
+
+.carousel {
+    background-image: url(../img/BG.png);
+    height: 700px;
+    background-repeat: no-repeat;
+    /* background-repeat: là tự động lặp lại nếu không muốn phải thêm giá trị; */
+    /* hiện tại đang ở stye.css muốn ra ngoài phải ../ là ra 1 cấp hình không hiện là do chiều cao bằng nội dung không nội dung thì nó bằng 0 nên phải thêm chiều cao vào */
+    background-size: cover;
+    /* có  giá trị px , % , cover là tự động phủ hết ô */
+    background-position: center center;
+    /*
+background-position:x  y ;
+background-position:left top ;
+background-position:left bottom ;
+background-position:right top ;
+background-position:right bottom ; 
+background-position: 100px  300px ;
+background-position:ri-100px  -300px
+nó lượm ảnh  ở  vị trí giữa background và ảnh */
+}
+
+.activity {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.activity .title {
+    text-align: center;
+    color: #9d9d9c;
+}
+
+.activity .list .item {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    /* giữ nguyên kích thước không cộng dồn */
+    box-sizing: border-box;
+    /* padding:0 15px; suy  ra kich thuoc dòng này là 25%+15+15(trái,phải)+1+1(boder) */
+    /* border: 1px solid  #000000 */
+    /* border do day duong vien , kieu duong vien  (solid),dashed ,dotted #000000 */
+    /* nếu không cách nhau được (margin) thì phải lừa người  dùng padding */
+}
+
+.activity .list .item .content {
+    /* background-color: #ffffff; gốc*/
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    /* bo góc của cạnh px càng cao thì càng bo */
+    box-shadow: 0px 0px 20px #eee6e6
+    /* 0 0 là đổ điều 4 phía 
+  10pxđổ bóng sang trái  dương ,  20 đổ bóng xuống hay lên
+  20px  đổ bóng mờ hay đậm ( độ nhòe )
+  #000000  màu của đổ bóng  không dùng đen đậm */
+}
+
+.activity .item .content .thumbnail img {
+    width: 100%;
+    border-radius: 20px
+    /* tính theo % của cái  class trước nó */
+}
+
+.activity .item .content a {
+    background-color: grey;
+    /* #e7e7e8 */
+    /* border-radius: 20px; */
+    color: hotpink;
+    /* #9d9d9c */
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 200px;
+    /* display
+block:  chinh witdh duoc
+chinh dc width  height
+margin top bottom duoc
+inline  :width = content
+khong chinh wwidth height duoc
+khong margin top bottom duoc; */
+}
+
+.activity .more {
+    text-align: center;
+}
+
+.activity .more button {
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #e76f51;
+    font-size: 25px;
+    display: inline-block;
+    margin-top: 25px;
+    border-radius: 200px;
+    border: 2px solid red;
+}
